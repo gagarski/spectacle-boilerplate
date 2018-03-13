@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -e
+
+./nodew --version > /dev/null # Ensuring installed node
+
+. "$(dirname "${BASH_SOURCE[0]}")/wrappers.conf"
+
+. "$(dirname "${BASH_SOURCE[0]}")/bash_libs/wrappers.sh"
+
+local_npm $@

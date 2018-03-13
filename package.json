@@ -4,8 +4,8 @@
   "description": "ReactJS Powered Presentation Framework",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "cross-env NODE_ENV=production webpack --config --progess webpack.config.production.ts",
-    "lint": "eslint --ext .js,.jsx .",
+    "mrproper": "rimraf dist .node",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.production.ts",
     "deploy": "npm run clean & npm run build && surge -p .",
     "export": "spectacle-renderer --delay 3000",
     "start": "cross-env NODE_ENV=development ts-node server.ts"
