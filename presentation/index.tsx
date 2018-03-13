@@ -20,6 +20,8 @@ import createTheme from "spectacle/lib/themes/default";
 // Require CSS
 import "normalize.css";
 
+import createHistory from 'history/createBrowserHistory'
+
 const theme = createTheme({
     primary: "white",
     secondary: "#1F2022",
@@ -30,10 +32,18 @@ const theme = createTheme({
     secondary: "Helvetica"
 });
 
+const history = createHistory();
+
 export default class Presentation extends React.Component {
     render() {
+        let props: any = {
+            transition: ["zoom", "slide"],
+            transitionDuration: 500,
+            theme,
+            history
+        };
         return (
-            <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
+            <Deck {...props}>
                 <Slide transition={["zoom"]} bgColor="primary">
                     <Heading size={1} fit caps lineHeight={1} textColor="secondary">
                         Spectacle Boilerplate
