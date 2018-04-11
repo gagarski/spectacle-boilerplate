@@ -41,7 +41,7 @@ export default class Presentation extends React.Component {
             transitionDuration: 500,
             theme,
             history
-        };
+        }; // TODO make a PR to DefinitelyTyped
         return (
             <Deck {...props}>
                 <Slide transition={["zoom"]} bgColor="primary">
