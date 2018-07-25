@@ -20,7 +20,6 @@ const config: webpack.Configuration = {
                 "NODE_ENV": JSON.stringify("production")
             }
         }),
-        new webpack.optimize.UglifyJsPlugin()
     ],
     resolve: {
         extensions: [".webpack.js", ".web.js", ".ts", ".tsx", ".js", ".jsx", ".css", ".less"],
@@ -55,6 +54,9 @@ const config: webpack.Configuration = {
             test: /\.svg$/,
             loader: "url-loader?limit=10000&mimetype=image/svg+xml"
         }]
+    },
+    optimization: {
+        minimize: true
     }
 };
 

@@ -11,7 +11,7 @@ import {
     List,
     Quote,
     Slide,
-    Text
+    Text, Appear, Image
 } from "spectacle";
 
 // Import theme
@@ -46,35 +46,37 @@ export default class Presentation extends React.Component {
             <Deck {...props}>
                 <Slide transition={["zoom"]} bgColor="primary">
                     <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-                        Spectacle Boilerplate
+                        Hello!
                     </Heading>
                     <Text margin="10px 0 0" textColor="tertiary" fit bold>
-                        open the presentation/index.js file to get started
+                        This is a presentation!
                     </Text>
                 </Slide>
-                <Slide transition={["fade"]} bgColor="tertiary">
-                    <Heading size={6} textColor="primary" caps>Typography</Heading>
-                    <Heading size={1} textColor="secondary">Heading 1</Heading>
-                    <Heading size={2} textColor="secondary">Heading 2</Heading>
-                    <Heading size={3} textColor="secondary">Heading 3</Heading>
-                    <Heading size={4} textColor="secondary">Heading 4</Heading>
-                    <Heading size={5} textColor="secondary">Heading 5</Heading>
-                    <Text textColor="secondary">Standard text</Text>
-                </Slide>
-                <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-                    <Heading size={6} textColor="secondary" caps>Standard List</Heading>
+                <Slide transition={["zoom"]} bgColor="primary" textColor="tertiary">
+                    <Heading size={1} textColor="secondary" caps>Never gonna</Heading>
                     <List>
-                        <ListItem>Item 1</ListItem>
-                        <ListItem>Item 2</ListItem>
-                        <ListItem>Item 3</ListItem>
-                        <ListItem>Item 4</ListItem>
+                        <Appear><ListItem>Give you up</ListItem></Appear>
+                        <Appear><ListItem>Let you down</ListItem></Appear>
+                        <Appear><ListItem>Run around</ListItem></Appear>
+                        <Appear><ListItem>Desert you</ListItem></Appear>
                     </List>
                 </Slide>
-                <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-                    <BlockQuote>
-                        <Quote>Example Quote</Quote>
-                        <Cite>Author</Cite>
-                    </BlockQuote>
+                <Slide transition={["zoom"]} bgColor="primary" textColor="tertiary">
+                    <Heading size={1} textColor="secondary" caps>Never gonna</Heading>
+                    <List>
+                        <Appear><ListItem>Make you cry</ListItem></Appear>
+                        <Appear><ListItem>Say goodbye</ListItem></Appear>
+                        <Appear><ListItem>Tell a lie</ListItem></Appear>
+                        <Appear><ListItem>Hurt you</ListItem></Appear>
+                    </List>
+                </Slide>
+                <Slide transition={["zoom"]} bgColor="primary" textColor="tertiary">
+                    <Heading size={1} textColor="secondary" caps>proof</Heading>
+                    <iframe className="aligned" width="854" height="480" src="https://www.youtube.com/embed/DLzxrzFCyOs"
+                            frameBorder="0" allowFullScreen={true}/>
+                </Slide>
+                <Slide transition={["zoom"]} bgColor="primary" textColor="tertiary">
+                    <Image src={"assets/cat.png"}/>
                 </Slide>
             </Deck>
         );
